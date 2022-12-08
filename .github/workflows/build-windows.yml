@@ -27,7 +27,7 @@ env:
   FLAKY_TESTS: keep_retrying
 
 permissions:
-  contents: read
+  contents: read 
 
 jobs:
   build-windows:
