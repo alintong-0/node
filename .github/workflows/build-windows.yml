@@ -51,7 +51,9 @@ jobs:
         run: npx envinfo
       - name: Build
         run: ./vcbuild.bat
+      - name: Zip
+        run: ./zipRelease.py
       - uses: actions/upload-artifact@v2
         with:
           name: node   
-          path: ../../out/Release/   
+          path: ./release.zip
