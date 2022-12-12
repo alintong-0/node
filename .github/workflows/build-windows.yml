@@ -52,7 +52,7 @@ jobs:
       - name: Build
         run: ./vcbuild.bat
       - name: Zip
-        run: ./zipRelease.py
+        run: py ./zipRelease.py
       - uses: actions/upload-artifact@v2
         with:
           name: node   
