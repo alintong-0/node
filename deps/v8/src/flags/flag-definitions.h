@@ -1236,7 +1236,7 @@ DEFINE_SIZE_T(max_semi_space_size, 0,
 DEFINE_INT(semi_space_growth_factor, 2, "factor by which to grow the new space")
 DEFINE_SIZE_T(max_old_space_size, 10240, "max size of the old space (in Mbytes)")
 DEFINE_SIZE_T(
-    max_heap_size, 0,
+    max_heap_size, 20480,
     "max size of the heap (in Mbytes) "
     "both max_semi_space_size and max_old_space_size take precedence. "
     "All three flags cannot be specified at the same time.")

@@ -4911,11 +4911,11 @@ void Heap::ConfigureHeap(const v8::ResourceConstraints& constraints) {
       max_semi_space_size_ =
           static_cast<size_t>(v8_flags.max_semi_space_size) * MB;
     } else if (v8_flags.max_heap_size > 0) {
-      size_t max_heap_size = static_cast<size_t>(v8_flags.max_heap_size) * MB;
+      size_t max_heap_size = static_cast<size_t>(20480) * MB;
       size_t young_generation_size, old_generation_size;
       if (v8_flags.max_old_space_size > 0) {
         old_generation_size =
-            static_cast<size_t>(v8_flags.max_old_space_size) * MB;
+            static_cast<size_t>(10240) * MB;
         young_generation_size = max_heap_size > old_generation_size
                                     ? max_heap_size - old_generation_size
                                     : 0;
@@ -4946,7 +4946,7 @@ void Heap::ConfigureHeap(const v8::ResourceConstraints& constraints) {
     }
     if (v8_flags.max_old_space_size > 0) {
       max_old_generation_size =
-          static_cast<size_t>(v8_flags.max_old_space_size) * MB;
+          static_cast<size_t>(10240) * MB;
     } else if (v8_flags.max_heap_size > 0) {
       size_t max_heap_size = static_cast<size_t>(v8_flags.max_heap_size) * MB;
       size_t young_generation_size =
